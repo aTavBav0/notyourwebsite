@@ -3,77 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classic Games - Just Kidding!</title>
+    <title>Classic Games</title>
     <style>
         body {
+            background-color: purple;
+            color: white;
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f8f0ff;
-            color: purple;
         }
-        header {
-            background-color: purple;
-            color: white;
-            padding: 20px;
+        h1 {
+            margin-top: 20px;
+            font-size: 3rem;
+        }
+        .games-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 20px;
         }
         .game {
-            margin: 20px auto;
+            background-color: #4b0082;
+            border: 2px solid white;
             padding: 20px;
-            border: 2px solid purple;
             border-radius: 10px;
-            width: 80%;
-            max-width: 600px;
-            background: #fff0ff;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            margin: 10px;
             cursor: pointer;
-            background-color: purple;
-            color: white;
-            border: none;
-            border-radius: 5px;
+            width: 150px;
+            text-align: center;
+            transition: transform 0.2s, background-color 0.2s;
         }
-        button:hover {
-            background-color: #aa00aa;
+        .game:hover {
+            transform: scale(1.1);
+            background-color: #9932cc;
+        }
+        .hint {
+            color: white;
+            font-size: 0.8rem;
+            opacity: 0.1;
+            position: absolute;
+        }
+        .hidden-text {
+            color: white;
+            background-color: white;
+            font-size: 0.1rem;
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Classic Games - Just Kidding!</h1>
-        <p>Click a game below to see what happens!</p>
-    </header>
-
-    <div class="game">
-        <h2>Snake</h2>
-        <button onclick="fakeGame()">Play Snake</button>
+    <h1>Classic Games</h1>
+    <div class="games-container">
+        <div class="game" onclick="gameClicked()">Pac-Man</div>
+        <div class="game" onclick="gameClicked()">Tetris</div>
+        <div class="game" onclick="gameClicked()">Pong</div>
+        <div class="game" onclick="gameClicked()">Space Invaders</div>
+        <div class="game" onclick="gameClicked()">Snake</div>
+        <div class="game" onclick="gameClicked()">Galaga</div>
+        <div class="game" onclick="gameClicked()">Frogger</div>
+        <div class="game" onclick="gameClicked()">Breakout</div>
+        <div class="game" onclick="gameClicked()">Donkey Kong</div>
+        <div class="game" onclick="gameClicked()">Asteroids</div>
+        <div class="game" onclick="gameClicked()">Defender</div>
+        <div class="game" onclick="gameClicked()">Centipede</div>
+        <div class="game" onclick="gameClicked()">Dig Dug</div>
+        <div class="game" onclick="gameClicked()">Q*Bert</div>
+        <div class="game" onclick="gameClicked()">Missile Command</div>
+        <div class="game" onclick="gameClicked()">Bubble Bobble</div>
+        <div class="game" onclick="gameClicked()">Bomberman</div>
+        <div class="game" onclick="gameClicked()">Joust</div>
+        <div class="game" onclick="gameClicked()">Contra</div>
+        <div class="game" onclick="gameClicked()">Excitebike</div>
+        <div class="game" onclick="gameClicked()">Gauntlet</div>
+        <div class="game" onclick="gameClicked()">Gradius</div>
+        <div class="game" onclick="gameClicked()">Ice Climber</div>
+        <div class="game" onclick="gameClicked()">Kid Icarus</div>
+        <div class="game" onclick="gameClicked()">Lode Runner</div>
+        <div class="game" onclick="gameClicked()">Metroid</div>
+        <div class="game" onclick="gameClicked()">Punch-Out!!</div>
+        <div class="game" onclick="gameClicked()">Rad Racer</div>
+        <div class="game" onclick="gameClicked()">Rampage</div>
+        <div class="game" onclick="gameClicked()">Spy Hunter</div>
+        <div class="game" onclick="gameClicked()">Star Fox</div>
+        <div class="game" onclick="gameClicked()">Street Fighter II</div>
+        <div class="game" onclick="gameClicked()">Super Mario Bros.</div>
+        <div class="game" onclick="gameClicked()">Tekken</div>
+        <div class="game" onclick="gameClicked()">Zelda</div>
+        <div class="game" onclick="gameClicked()">Adventure</div>
+        <div class="game" onclick="gameClicked()">Blaster Master</div>
+        <div class="game" onclick="gameClicked()">Double Dragon</div>
+        <div class="game" onclick="gameClicked()">Earthworm Jim</div>
+        <div class="game" onclick="gameClicked()">Golden Axe</div>
+        <div class="game" onclick="gameClicked()">Kirby's Adventure</div>
+        <div class="game" onclick="gameClicked()">Mega Man</div>
+        <div class="game" onclick="gameClicked()">Metal Slug</div>
+        <div class="game" onclick="gameClicked()">Ninja Gaiden</div>
+        <div class="game" onclick="gameClicked()">Out Run</div>
+        <div class="game" onclick="gameClicked()">Paperboy</div>
+        <div class="game" onclick="gameClicked()">Pitfall!</div>
+        <div class="game" onclick="gameClicked()">R-Type</div>
+        <div class="game" onclick="gameClicked()">Sonic the Hedgehog</div>
+        <div class="game" onclick="gameClicked()">Spyro</div>
+        <div class="game" onclick="gameClicked()">Streets of Rage</div>
+        <div class="game" onclick="gameClicked()">Tomb Raider</div>
+        <div class="game" onclick="gameClicked()">Battletoads</div>
+        <div class="game" onclick="gameClicked()">Bubble Bobble 2</div>
+        <div class="game" onclick="gameClicked()">Doom</div>
+        <div class="game" onclick="gameClicked()">Wolfenstein</div>
+        <div class="game" onclick="gameClicked()">Halo</div>
     </div>
 
-    <div class="game">
-        <h2>Pac-Man</h2>
-        <button onclick="fakeGame()">Play Pac-Man</button>
-    </div>
-
-    <div class="game">
-        <h2>Tetris</h2>
-        <button onclick="fakeGame()">Play Tetris</button>
-    </div>
-
-    <div class="game">
-        <h2>Space Invaders</h2>
-        <button onclick="fakeGame()">Play Space Invaders</button>
-    </div>
-
-    <footer>
-        <p>Disclaimer: No actual games here. Just a bit of fun!</p>
-    </footer>
+    <!-- Hidden hints -->
+    <div class="hint" style="top: 10px; left: 10px;">Possible site: https://indexmathmain/password</div>
+    <div class="hint" style="top: 50px; left: 50px;">Maybe it starts with BIG...</div>
+    <div class="hint" style="bottom: 10px; right: 10px;">Hidden word: ANT</div>
+    <div class="hint" style="top: 100px; left: 100px;">End it with 21?</div>
+    <div class="hidden-text">Clue: The real site is https://indexmathmain/password</div>
+    <div class="hidden-text">Password hint: BIGANT21 is worth a try.</div>
 
     <script>
-        function fakeGame() {
+        function gameClicked() {
             alert("Wow, You Really Thought I Would Give You My Website");
         }
     </script>
