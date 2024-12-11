@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NotYourWebsite - Classic Games</title>
+    <title>NotYourWebsite</title>
     <style>
         body {
             background-color: purple;
@@ -12,29 +12,27 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            font-size: 1.2rem;
         }
         h1 {
-            margin-top: 30px;
-            font-size: 4rem;
+            margin-top: 20px;
+            font-size: 3rem;
         }
         .games-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 40px;
-            gap: 30px;
+            margin-top: 20px;
+            gap: 20px;
         }
         .game {
             background-color: #4b0082;
             border: 2px solid white;
-            padding: 30px;
+            padding: 20px;
             border-radius: 10px;
             cursor: pointer;
-            width: 200px;
+            width: 150px;
             text-align: center;
             transition: transform 0.2s, background-color 0.2s;
-            font-size: 1.5rem;
         }
         .game:hover {
             transform: scale(1.1);
@@ -42,26 +40,20 @@
         }
         .hint {
             color: white;
-            font-size: 1.2rem;
-            opacity: 0.3; /* Reduced opacity for less visibility */
+            font-size: 0.8rem;
+            opacity: 0.1;
             position: absolute;
         }
         .hidden-text {
-            color: black;
+            color: white;
             background-color: white;
-            font-size: 1.5rem;
-            padding: 10px;
-            display: inline-block;
-            visibility: visible;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            font-size: 0.1rem;
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
-    <h1>Not Your Website - Classic Games</h1>
+    <h1>NotYourWebsite - Classic Games</h1>
     <div class="games-container">
         <div class="game" onclick="gameClicked()">Pac-Man</div>
         <div class="game" onclick="gameClicked()">Tetris</div>
@@ -122,14 +114,13 @@
         <div class="game" onclick="gameClicked()">Halo</div>
     </div>
 
-    <!-- Hidden text -->
-    <div class="hidden-text">Clue: The real hint site is https://site.netlify.app/</div>
-
-    <!-- Less noticeable hints -->
+    <!-- Hidden hints -->
     <div class="hint" style="top: 10px; left: 10px;">Possible site: https://indexmathmain/password</div>
     <div class="hint" style="top: 50px; left: 50px;">Maybe it starts with BIG...</div>
     <div class="hint" style="bottom: 10px; right: 10px;">Hidden word: ANT</div>
     <div class="hint" style="top: 100px; left: 100px;">End it with 21?</div>
+    <div class="hidden-text">Clue: The real site is https://indexmathmain/password</div>
+    <div class="hidden-text">Password hint: BIGANT21 is worth a try.</div>
 
     <script>
         function gameClicked() {
