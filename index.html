@@ -3,147 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NotYourWebsite - Classic Games</title>
+    <title>Classic Games - Just Kidding!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #f8f0ff;
+            color: purple;
         }
         header {
-            background-color: #333;
+            background-color: purple;
             color: white;
             padding: 20px;
         }
         .game {
             margin: 20px auto;
             padding: 20px;
-            border: 1px solid #ccc;
+            border: 2px solid purple;
             border-radius: 10px;
             width: 80%;
             max-width: 600px;
-            background: white;
+            background: #fff0ff;
         }
         button {
             padding: 10px 20px;
             font-size: 16px;
             margin: 10px;
             cursor: pointer;
+            background-color: purple;
+            color: white;
+            border: none;
+            border-radius: 5px;
         }
-        #mazeGoal {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background-color: red;
-            position: absolute;
+        button:hover {
+            background-color: #aa00aa;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>NotYourWebsite - Classic Games</h1>
-        <p>Play classic games here... or so you think!</p>
+        <h1>Classic Games - Just Kidding!</h1>
+        <p>Click a game below to see what happens!</p>
     </header>
 
     <div class="game">
-        <h2>Impossible Maze</h2>
-        <p>Try to click the red square!</p>
-        <div id="mazeContainer" style="position:relative; width:300px; height:300px; margin:auto; background:#ddd;">
-            <div id="mazeGoal"></div>
-        </div>
-        <p id="mazeMessage" style="display:none; font-weight:bold;">Wow You Fell For It STUPID IDIOT!</p>
+        <h2>Snake</h2>
+        <button onclick="fakeGame()">Play Snake</button>
     </div>
 
     <div class="game">
-        <h2>Click the Button (1,000,000 times)</h2>
-        <button id="clickButton">Click Me!</button>
-        <p>Clicks: <span id="clickCount">0</span>/1,000,000</p>
-        <p id="clickMessage" style="display:none; font-weight:bold;">Wow You Fell For It STUPID IDIOT!</p>
+        <h2>Pac-Man</h2>
+        <button onclick="fakeGame()">Play Pac-Man</button>
     </div>
 
     <div class="game">
-        <h2>Guess the Number</h2>
-        <p>Guess a number between 1 and 10!</p>
-        <input type="number" id="guessInput">
-        <button onclick="checkGuess()">Submit</button>
-        <p id="guessResult"></p>
-        <p id="guessMessage" style="display:none; font-weight:bold;">Wow You Fell For It STUPID IDIOT!</p>
+        <h2>Tetris</h2>
+        <button onclick="fakeGame()">Play Tetris</button>
     </div>
 
     <div class="game">
-        <h2>Random Compliment Generator</h2>
-        <button onclick="generateCompliment()">Get Compliment</button>
-        <p id="complimentResult"></p>
-        <p id="complimentMessage" style="display:none; font-weight:bold;">Wow You Fell For It STUPID IDIOT!</p>
-    </div>
-
-    <div class="game">
-        <h2>404 Game</h2>
-        <button onclick="play404()">Play</button>
-        <p id="game404Message" style="display:none; font-weight:bold;">Wow You Fell For It STUPID IDIOT!</p>
+        <h2>Space Invaders</h2>
+        <button onclick="fakeGame()">Play Space Invaders</button>
     </div>
 
     <footer>
-        <p>Disclaimer: This site is a parody and not responsible for your sanity.</p>
+        <p>Disclaimer: No actual games here. Just a bit of fun!</p>
     </footer>
 
     <script>
-        // Impossible Maze
-        const mazeGoal = document.getElementById('mazeGoal');
-        const mazeMessage = document.getElementById('mazeMessage');
-        mazeGoal.style.top = `${Math.random() * 250}px`;
-        mazeGoal.style.left = `${Math.random() * 250}px`;
-
-        mazeGoal.addEventListener('mouseover', () => {
-            mazeGoal.style.top = `${Math.random() * 250}px`;
-            mazeGoal.style.left = `${Math.random() * 250}px`;
-            mazeMessage.style.display = 'block';
-        });
-
-        // Click the Button (1,000,000 times)
-        let clickCount = 0;
-        const clickMessage = document.getElementById('clickMessage');
-        document.getElementById('clickButton').addEventListener('click', () => {
-            clickCount++;
-            document.getElementById('clickCount').textContent = clickCount;
-            if (clickCount >= 1000000) {
-                alert("You did it! You wasted your time!");
-                clickMessage.style.display = 'block';
-            }
-        });
-
-        // Guess the Number
-        const guessMessage = document.getElementById('guessMessage');
-        function checkGuess() {
-            const userGuess = document.getElementById('guessInput').value;
-            const correctNumber = Math.floor(Math.random() * 10) + 1;
-            document.getElementById('guessResult').textContent = userGuess == correctNumber ? "Correct! (For now...)" : `Wrong! It was ${correctNumber}. Try again!`;
-            guessMessage.style.display = 'block';
-        }
-
-        // Random Compliment Generator
-        const compliments = [
-            "You're almost good at this!",
-            "Wow, you're trying so hard!",
-            "Great effort! For someone who just started...",
-            "You're the best at... something, probably!",
-            "Keep going, champ! Maybe you'll get it one day."
-        ];
-        const complimentMessage = document.getElementById('complimentMessage');
-
-        function generateCompliment() {
-            const randomIndex = Math.floor(Math.random() * compliments.length);
-            document.getElementById('complimentResult').textContent = compliments[randomIndex];
-            complimentMessage.style.display = 'block';
-        }
-
-        // 404 Game
-        const game404Message = document.getElementById('game404Message');
-        function play404() {
-            game404Message.style.display = 'block';
-            setTimeout(() => window.location.href = "/404.html", 1000);
+        function fakeGame() {
+            alert("Wow, You Really Thought I Would Give You My Website");
         }
     </script>
 </body>
